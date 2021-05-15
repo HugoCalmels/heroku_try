@@ -68,7 +68,9 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'tether-rails'
-gem 'node'
+
+
+
 
 group :development, :test do
   gem 'sqlite3'
