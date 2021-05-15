@@ -1,0 +1,12 @@
+
+
+    <%= @users.each do |user| %>
+      
+        <p>
+        <a href="<%= user_path(user.id) %>" class="btn btn-primary">
+        <%= user.first_name %>
+        <%= user.last_name %>
+        </a>
+        </p>
+      
+    <% end %>

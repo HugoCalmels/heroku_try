@@ -1,0 +1,11 @@
+<center>
+<% @gossips.each_with_index do |gossip, index| %>
+  <tr>
+    <td><%= gossip.user.first_name %></td>
+    <td><%= gossip.title %></td>
+  </tr>
+<% end %>
+</center>
+
+
+

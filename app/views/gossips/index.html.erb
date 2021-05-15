@@ -1,0 +1,59 @@
+<style>
+.jumbotron-fluid1 {  
+        display: flex ;
+        padding:10px;
+      background-color: #EC8A28;
+      margin:10px auto;
+      border-radius:10px;
+      color:#333;
+      width: 1200px;
+      height: 160px;
+      justify-content : center ;    
+	}
+    .jumbotron-fluid2  {  
+        display: flex ;
+        padding:10px;
+      background-color: #EC8A28;
+      margin:10px auto;
+      border-radius:10px;
+      color:#333;
+      width: 1200px;
+      height: 2000px;      
+	}
+</style>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid1" style="background-color: #aaa">
+        <form class="form-inline justify-content-center">
+            <div class="container">
+                <h1 class="display-12"> Bienvenue sur The Gossip Project ! </h1>
+                <hr class="my-8"> 
+                <center><%= link_to "Ajoute ton gossip à la base de données", new_gossip_path, class: "btn btn-success" %></center>  
+            </div> 
+        </form>
+    </div>    
+</div>
+  
+<div class="container">
+    <div class="jumbotron jumbotron-fluid2" style="background-color: #aaa">
+        <div class="container">
+            <h1><u><center> Banque des gossips </center></u></h1>
+            <br>
+            <% @gossips.each do |gossip| %>
+            <p>
+            <a href="<%= gossip_path(gossip.id) %>" class="btn btn-primary">description</a>
+            <a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-warning">editer</a>
+            <a href="<%= gossip_path(gossip.id) %>" class="btn btn-danger" data-confirm="etes vous sur?" data-method="DELETE" >supprimer</a>
+            <strong>Titre</strong> : <%= gossip.title %>, <strong>Contenu</strong> : <%= gossip.content %>
+            </p>
+            <hr class="my-8">
+            <% end %>
+        </div>
+    </div>
+</div>
+    
+
+
+
+    
+    

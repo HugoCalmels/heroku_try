@@ -1,0 +1,11 @@
+<center>
+<form action= <%= gossips_path %> method="POST">
+<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+  <label for="fname">Title</label>
+  <input type="text" id="title" name="title"><br><br>
+  <label for="lname">Content</label>
+  <input type="text" id="content" name="content"><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+</center>

@@ -1,0 +1,12 @@
+<center>
+<form action= <%= sessions_path %> method="POST">
+<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+
+  <label for="lname">Email</label>
+  <input type="text" id="email" name="email"><br><br>
+  <label for="lname">Mot de passe</label>
+  <input type="text" id="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+</center>

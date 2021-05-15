@@ -1,0 +1,34 @@
+<center>
+<br />
+<h2><strong><u> Gossip °<%= @id %> </u></strong></h2>
+<br />
+
+<p><strong> Titre </strong>: <%= @gossip.title %> </p>
+
+<p><strong> Contenu</strong> : <%= @gossip.content %> </p>
+
+<p><strong> Auteur </strong>: <%= @gossip.user.first_name %> <%= @gossip.user.last_name %> 
+<%= link_to " description auteur ", user_path, class: "btn btn-primary" %> </p>
+
+<p><strong> Ville</strong> : <%= @gossip.user.city.name %> 
+<%= link_to " page de la ville ", city_path, class: "btn btn-primary" %> </p>
+
+<br />
+
+<h3><u> Liste des Commentaires </u></h3>
+  <p><% @gossip.comments.each do |comment| %>
+    <strong>Commentaire</strong> :
+    <%= comment.content %> 
+    <br>
+    <strong>Auteur</strong> :
+    <%= User.find(@gossip.user.id).first_name %> 
+    <%= User.find(@gossip.user.id).last_name %>
+  </p>
+  <% end %>
+
+<%= link_to " créer un nouveau commentaire ", new_comment_path, class: "btn btn-success" %>
+<br />
+<br />
+<a href ="<%= gossips_path %>" class="btn btn-primary">Revenir aux début</a>
+
+</center>

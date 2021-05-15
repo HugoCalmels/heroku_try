@@ -1,0 +1,22 @@
+<center>
+
+<br />
+
+<h4><u> Informations sur l'auteur </u></h4>
+
+<br />
+
+<p> Nom de famille : <%= @user.last_name %> </p>
+
+<p> Prénom : <%= @user.first_name %> </p>
+
+<p> Description : <%= @user.describtion %> </p>
+
+<p> E-mail : <%=@user.email%></p>
+
+<p> Age : <%= @user.age %> </p>
+
+<p> Ville : <%= @user.city.name %>
+<%= link_to " page de la ville ", city_path, class: "btn btn-primary" %> </p>
+
+</center>
