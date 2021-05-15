@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  root 'gossips#index'
   get 'sessions/new'
   get '/contact', to: 'static_pages#contact'
   get '/team', to: 'static_pages#team'
